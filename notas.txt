@@ -1,0 +1,2 @@
+./ClimaTodoDia/scripts/activate para ativar o venv 
+
