@@ -52,9 +52,9 @@ def bot():
         
         temperaturaMaxima, temperaturaMinima, pobraChuva = clima(lat, long)
         mensagem = (f'previsão para 📍{msg_usuario}\n'
-                    f'🌡️Maxima de {temperaturaMaxima}°\n'
-                    f'🌡️Minima de {temperaturaMinima}°\n'
-                    f'e a Chance de chuva é de ☔{pobraChuva}%')
+                    f'🌡️Máxima  de {temperaturaMaxima}°\n'
+                    f'🌡️Mínima  de {temperaturaMinima}°\n'
+                    f'e a chance de chuva é de ☔{pobraChuva}%')
         resp = MessagingResponse()
         resp.message(mensagem)
         return str(resp)
