@@ -25,6 +25,26 @@ nele voce ja pode digitar o nome de alguma cidade e receber os dados.
 
 Se voce leu até o final, obrigado, se puder, deixe sua estrela e sua sugestão, elas vão ser muito bem vindas. 
 
+links importantes:
+'Ponte' https://ngrok.com/
+instalador do python, versao utilizada é a 3.14.3: https://www.python.org/downloads/ 
+twilio: https://console.twilio.com/us1/develop/sms/try-it-out/whatsapp-learn
+
+APIs de clima: 
+https://open-meteo.com/en/docs?forecast_days=1&hourly=&timezone=auto&latitude=-22.9064&longitude=-43.1822&bounding_box=-90,-180,90,180&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max#settings
+
+APIs de Geocoding: 
+https://open-meteo.com/en/docs/geocoding-api?name=&language=pt&count=1
+
+Frameworks Utilziados: 
+Flask: https://flask.palletsprojects.com/en/stable/installation/
+
+bibilotecas utilizadas: 
+requests: python -m pip install requests (no terminal)
+
+IA utlizada: GEMINI no modo aprendizado guiado. 
+
+Disclaimer: ia foi utilizada neste codigo para consultas, aprendizado e de forma secundaria (não foi utulizada no forma de criação primaria de codigo), e na verificacao de erros (que teve muitos rs).   
 
 
 
