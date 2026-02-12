@@ -1,2 +1,6 @@
 ./ClimaTodoDia/scripts/activate para ativar o venv 
 
+ngrok http 5000 para ativar a ponte
+
+adicionar o /bot no final do twilio para validar o app.
+
