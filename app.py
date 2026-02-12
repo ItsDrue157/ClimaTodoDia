@@ -44,19 +44,27 @@ def bot():
     urlGeo = f'https://geocoding-api.open-meteo.com/v1/search?name={msg_usuario}&count=1&language=pt&format=json'
     responseGeo = requests.get(urlGeo)
     conteudoGeo = responseGeo.json()
+    print(conteudoGeo)
+    if 'results' in conteudoGeo:
 
-    lat, long = dadosDeLocalizacao(conteudoGeo)
+
+        lat, long = dadosDeLocalizacao(conteudoGeo)
+        
+        temperaturaMaxima, temperaturaMinima, pobraChuva = clima(lat, long)
+        mensagem = (f'previsão para 📍{msg_usuario}\n'
+                    f'🌡️Maxima de {temperaturaMaxima}°\n'
+                    f'🌡️Minima de {temperaturaMinima}°\n'
+                    f'e a Chance de chuva é de ☔{pobraChuva}%')
+        resp = MessagingResponse()
+        resp.message(mensagem)
+        return str(resp)
+    else:
+        resp = MessagingResponse()
+        mensagemErro = f'A cidade {msg_usuario} não foi encontrada em nossos sistemas. Por favor tente novamente.' 
+        resp.message(mensagemErro)
+        return str(resp)
     
-    temperaturaMaxima, temperaturaMinima, pobraChuva = clima(lat, long)
-    mensagem = (f'previsão para 📍{msg_usuario}\n'
-                f'🌡️Maxima de {temperaturaMaxima}°\n'
-                f'🌡️Minima de {temperaturaMinima}°\n'
-                f'e a Chance de chuva é de ☔{pobraChuva}%')
     
-    
-    resp = MessagingResponse()
-    resp.message(mensagem)
-    return str(resp)
 
 if __name__ == "__main__":
     app.run(port=5000)
