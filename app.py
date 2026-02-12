@@ -48,10 +48,10 @@ def bot():
     lat, long = dadosDeLocalizacao(conteudoGeo)
     
     temperaturaMaxima, temperaturaMinima, pobraChuva = clima(lat, long)
-    mensagem = (f'previsão para {msg_usuario}\n'
-                f'Maxima de {temperaturaMaxima}\n'
-                f'Minima de {temperaturaMinima}\n'
-                f'e a Chance de chuva é de {pobraChuva}')
+    mensagem = (f'previsão para 📍{msg_usuario}\n'
+                f'Maxima de 🌡️{temperaturaMaxima}°\n'
+                f'Minima de 🌡️{temperaturaMinima}°\n'
+                f'e a Chance de chuva é de ☔{pobraChuva}%')
     
     
     resp = MessagingResponse()
