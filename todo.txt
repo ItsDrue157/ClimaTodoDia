@@ -1,0 +1,14 @@
+ideias: 
+1. alertas sobre clima? 
+2. salvar uma cidade e receber no horario escolhido novas informacoes? 
+
+
+
+1.
+msm ideia do debaixo APScheduler e emitir um alerta se passar de x % de chuva ou temperatura
+
+2. 
+segundo o(a) gemini precisar agendar a tarefa ent tem q usar a lib APScheduler e precisa de um db pra salvar
+as info tipo cidade, nome do usuario e limite da chuva 
+
+
